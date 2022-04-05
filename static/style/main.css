@@ -53,35 +53,6 @@ textarea:focus, input:focus, button:focus {
   outline: none;
 }
 
-.preloader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  z-index: 100;
-}
-.preloader .spinner {
-  height: 32px;
-  width: 32px;
-  border: 4px solid #333;
-  border-top: 4px solid #fff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .cover {
   position: fixed;
   top: 0;
@@ -107,12 +78,13 @@ textarea:focus, input:focus, button:focus {
 }
 
 html {
+  width: 100%;
   font-family: "Inter", "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
-  background: black;
+  overflow: hidden;
 }
 
 body {

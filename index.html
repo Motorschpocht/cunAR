@@ -12,14 +12,6 @@
         <script src="js/aframe-html-shader.min.js"></script>
     </head>
     <body style="margin: 0; overflow: hidden;">
-        <div class="preloader">
-            <div class="spinner"></div>
-            <script>
-                window.onload = function(){
-                    document.querySelector(".preloader").style.display = "none";
-                }
-            </script>
-        </div>
         <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="enabled: false">
             <a-marker preset="custom" type="pattern" url="static/marker/qrcode.patt">
                 <a-plane rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60;"></a-plane>

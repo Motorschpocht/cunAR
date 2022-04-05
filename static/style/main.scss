@@ -1,5 +1,4 @@
 @import "reset";
-@import "preloader";
 @import "ar-content";
 
 *, *::before, *::after {
@@ -9,12 +8,13 @@
 }
 
 html {
+    width: 100%;
     font-family: "Inter", "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #fff;
-    background: black;
+    overflow: hidden;
 }
 
 body {
