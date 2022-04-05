@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="js/aframe.min.js"></script>
-    <script src="js/aframe-html-shader.min.js"></script>
-    <script src="js/aframe-mouse-cursor-component.min.js"></script>
-    <script src="js/html2canvas.min.js"></script>
-</head>
-<body style="margin: 0; overflow:hidden;">
-<!-- load AR.js -->
-<script src="js/aframe-ar.js"></script>
-
-<div id="profile" style="color: greenyellow; width: 300px; height: 300px; background-color: red; position: absolute; top: 0; left: 0;">
-    Hello world!
-</div>
-
-<!-- set AR.js to AFrame -->
-<a-scene embedded arjs="debugUIEnabled: false;">
-    <!-- set marker -->
-    <a-marker preset="hiro">
-        <a-plane position="0.43 1.17 -1.48" rotation="-72 85 -88" scale="1 1 1" material="shader: html; target: #profile;"></a-plane>
-    </a-marker>
-
-    <!-- set camera -->
-    <a-entity camera></a-entity>
-</a-scene>
-</body>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+            <a-entity
+            position="0 0 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="your-server/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
 </html>
