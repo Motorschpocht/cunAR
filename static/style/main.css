@@ -53,6 +53,24 @@ textarea:focus, input:focus, button:focus {
   outline: none;
 }
 
+.cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  z-index: -2;
+}
+
+.ar-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  overflow: hidden;
+}
+
 *, *::before, *::after {
   font-family: inherit;
   box-sizing: border-box;
@@ -64,6 +82,11 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+
+body {
+  background: black;
 }
 
 main {
@@ -74,7 +97,7 @@ main {
   width: 30vw;
   z-index: 1;
   padding: 24px;
-  background: white;
+  background: #000;
   overflow-y: auto;
 }
 
@@ -82,11 +105,40 @@ p {
   line-height: 1.5;
 }
 
-@media only screen and (max-width: 512px) {
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  z-index: 100;
+}
+.preloader .spinner {
+  height: 32px;
+  width: 32px;
+  border: 4px solid #333;
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 768px) {
   main {
     top: auto;
     left: 0;
-    height: 40vh;
+    height: 50vh;
     width: auto;
   }
 }

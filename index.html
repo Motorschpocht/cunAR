@@ -12,7 +12,15 @@
         <script src="js/aframe-html-shader.min.js"></script>
     </head>
     <body style="margin: 0; overflow: hidden;">
-        <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="dotsColor: #000; backgroundColor: #fff">
+        <div class="preloader">
+            <div class="spinner"></div>
+            <script>
+                window.onload = function(){
+                    document.querySelector(".preloader").style.display = "none";
+                }
+            </script>
+        </div>
+        <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="enabled: false">
             <a-marker preset="custom" type="pattern" url="static/marker/qrcode.patt">
                 <a-plane rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60;"></a-plane>
             </a-marker>
@@ -26,10 +34,9 @@
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </main>
 
+        <div class="cover"></div>
         <div class="ar-content">
-            <div style="width: 1000px; height: 1000px; position: fixed; left: 0; top: 0; z-index: -2; overflow: hidden;">
-                <div id="htmlElement" style="background: #000; color: #fff; font-size: 250px; font-family: sans-serif;">Hello World!</div>
-            </div>
+            <div id="htmlElement" style="background: #000; color: #fff; font-size: 250px; font-family: sans-serif;">Hello World!</div>
         </div>
     </body>
 </html>
