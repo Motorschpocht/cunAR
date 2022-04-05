@@ -99,7 +99,7 @@ main {
   width: 30vw;
   z-index: 1;
   padding: 24px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(16px);
   overflow-y: auto;
 }
