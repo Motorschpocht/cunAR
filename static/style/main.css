@@ -112,13 +112,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
-  overflow: hidden;
+  background: black;
 }
 
 body {
   background: black;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 }
 
 main {
