@@ -1,0 +1,39 @@
+@import "reset";
+
+*, *::before, *::after {
+    font-family: inherit;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-family: "Inter", "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30vw;
+    z-index: 1;
+    padding: 24px;
+    background: white;
+    overflow-y: auto;
+}
+
+p {
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 512px) {
+    main {
+        top: auto;
+        left: 0;
+        height: 30vh;
+        width: auto;
+    }
+}

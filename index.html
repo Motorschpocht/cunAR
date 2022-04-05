@@ -1,18 +1,35 @@
 <!DOCTYPE HTML>
 <html>
-    <script src="js/aframe.min.js"></script>
-    <script src="js/aframe-ar.js"></script>
-    <script src="js/aframe-html-shader.min.js"></script>
-    <body style="margin : 0px; overflow: hidden;">
-        <a-scene embedded arjs>
+    <head>
+        <title>cunAR</title>
+        <meta charset="UTF-8">
+    
+        <link rel="stylesheet" type="text/css" href="static/style/main.css">
+        <link rel="icon" type="image/x-icon" href="static/img/favicon.ico"/>
+    
+        <script src="js/aframe.min.js"></script>
+        <script src="js/aframe-ar.js"></script>
+        <script src="js/aframe-html-shader.min.js"></script>
+    </head>
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene embedded arjs vr-mode-ui="enabled: false">
             <a-marker preset="custom" type="pattern" url="static/qrcode.patt">
-                <a-plane rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60"></a-plane>
+                <a-plane rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60;"></a-plane>
+            </a-marker>
+            <a-marker preset="hiro">
+                <a-plane rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60;"></a-plane>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
+        <main>
+            <h1>Test</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </main>
 
-        <div style="width: 1000px; height: 1000px; position: fixed; left: 0; top: 0; z-index: -2; overflow: hidden">
-            <div id="htmlElement" style="background: #000; color: #fff; font-size: 250px; font-family: sans-serif;">Hello World!</div>
+        <div class="ar-content">
+            <div style="width: 1000px; height: 1000px; position: fixed; left: 0; top: 0; z-index: -2; overflow: hidden;">
+                <div id="htmlElement" style="background: #000; color: #fff; font-size: 250px; font-family: sans-serif;">Hello World!</div>
+            </div>
         </div>
     </body>
 </html>
