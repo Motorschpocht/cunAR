@@ -120,6 +120,19 @@ button {
   grid-template-columns: 50% 50%;
 }
 
+.frame {
+  min-height: 1000px;
+  min-width: 1000px;
+  padding: 48px 64px;
+  font-size: 250px;
+  font-family: sans-serif;
+  color: #fff;
+  background: rgba(85, 138, 122, 0.1);
+  border: #fff solid 50px;
+  border-radius: 100px;
+  transition: min-height 0.1s ease, min-width 0.1s ease;
+}
+
 @media only screen and (max-width: 768px) {
   main {
     top: auto;
