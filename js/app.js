@@ -23,14 +23,14 @@ document.addEventListener("alpine:init", () => {
                 plane: "A",
                 title: "Schritt 2",
                 text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-                height: 1,
-                width: 1.2,
-                xpos: .5,
-                ypos: .5,
-                zpos: .5,
-                xrot: -45,
-                yrot: 30,
-                zrot: 45
+                height: .5,
+                width: .5,
+                xpos: -.5,
+                ypos: 0,
+                zpos: 1,
+                xrot: -90,
+                yrot: 0,
+                zrot: 0
             },
             3: {
                 id: 3,
