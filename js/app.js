@@ -74,7 +74,7 @@ document.addEventListener("alpine:init", () => {
                 this.movePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xpos, this.startUp[this.startUpStep].ypos, this.startUp[this.startUpStep].zpos);
                 this.rotatePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xrot, this.startUp[this.startUpStep].yrot, this.startUp[this.startUpStep].zrot);
             } else {
-                // TODO
+                // TODO...
             }
         },
 
