@@ -6,6 +6,7 @@ document.addEventListener("alpine:init", () => {
         startUp: {
             1: {
                 id: 1,
+                ar: true,
                 plane: "A",
                 title: "Schritt 1",
                 text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
@@ -20,20 +21,13 @@ document.addEventListener("alpine:init", () => {
             },
             2: {
                 id: 2,
-                plane: "A",
+                ar: false,
                 title: "Schritt 2",
                 text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-                height: 1,
-                width: 1.2,
-                xpos: .5,
-                ypos: .5,
-                zpos: .5,
-                xrot: -45,
-                yrot: 30,
-                zrot: 45
             },
             3: {
                 id: 3,
+                ar: true,
                 plane: "A",
                 title: "Schritt 3",
                 text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
@@ -74,14 +68,19 @@ document.addEventListener("alpine:init", () => {
 
         updateStep(step) {
             this.startUpStep = step;
-            this.resizePlane(this.startUp[this.startUpStep].height, this.startUp[this.startUpStep].width);
-            this.movePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xpos, this.startUp[this.startUpStep].ypos, this.startUp[this.startUpStep].zpos);
-            this.rotatePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xrot, this.startUp[this.startUpStep].yrot, this.startUp[this.startUpStep].zrot);
+
+            if(this.startUp.ar) {
+                this.resizePlane(this.startUp[this.startUpStep].height, this.startUp[this.startUpStep].width);
+                this.movePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xpos, this.startUp[this.startUpStep].ypos, this.startUp[this.startUpStep].zpos);
+                this.rotatePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xrot, this.startUp[this.startUpStep].yrot, this.startUp[this.startUpStep].zrot);
+            } else {
+                // TODO
+            }
         },
 
         resetAll() {
             this.updatePage("start");
-            this.updateStep(1)
+            this.updateStep(1);
         }
     }))
 })

@@ -20,16 +20,27 @@
             <a-entity camera></a-entity>
         </a-scene>
         <main>
-            <div x-show="page == 'start'">
+            <div class="content" x-show="page == 'start'">
                 <h1>cunAR</h1>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                <button x-on:click="updatePage('startUp')">Inbetriebnahme starten</button>
+                <div class="body">
+                    <p>Eine geführte Inbetriebnahme der CUNA-Produktion in der SmartFactoryOWL.</p>
+                </div>
+                <div class="buttons">
+                    <button x-on:click="updatePage('startUp')">Inbetriebnahme starten</button>
+                </div>
             </div>
             
-            <div id="startUp" x-show="page == 'startUp'">
-                <h1>Inbetriebnahme</h1>
+            <div id="startUp" class="content" x-show="page == 'startUp'">
+                <div class="headline">
+                    <h1>Inbetriebnahme</h1>
+                    <div class="page">
+                        <span x-text="startUpStep"></span>
+                        <span>von</span>
+                        <span x-text="Object.keys(startUp).length"></span>
+                    </div>
+                </div>
                 <template x-for="id in Object.keys(startUp)" :key="id">
-                    <div x-show="startUpStep == id">
+                    <div class="body" x-show="startUpStep == id">
                         <h2 x-text="startUp[id].title"></h2>
                         <p x-text="startUp[id].text"></p>
                     </div>
@@ -38,11 +49,12 @@
                     <button  x-on:click="updateStep(startUpStep-1)" x-show="startUpStep > 1">Zurück</button>
                     <button  x-on:click="updateStep(startUpStep+1)" x-show="startUpStep < Object.keys(startUp).length">Weiter</button>
                 </div>
-                <button  x-on:click="resetAll()" style="margin-top: 12px;">Inbetriebnahme abbrechen</button>
+                <button class="secondary" x-on:click="resetAll()" style="margin-top: 12px;">Inbetriebnahme abbrechen</button>
             </div>
         </main>
 
         <div class="cover"></div>
+        <div class="shadow" x-show="!startUp[startUpStep].ar"></div>
         <div class="ar-content">
             <div id="htmlElement" class="frame" x-text="planeText"></div>
         </div>
