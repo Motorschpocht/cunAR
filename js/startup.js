@@ -45,7 +45,7 @@ const startUp = {
         id: 8,
         ar: false,
         title: 'Vordere Tür schließen und quittieren',
-        content: '<p>Schließen Sie die vordere Tür vollständing und quittieren Sie den Vorgang durch Betätigung der blauen Taste mit der Aufschrift "R".</p><img src="../static/img/blauetaste.png" alt="Blaue Taste" loading="lazy">',
+        content: '<p>Schließen Sie die vordere Tür vollständig und quittieren Sie den Vorgang durch Betätigung der blauen Taste mit der Aufschrift "R".</p><img src="../static/img/blauetaste.png" alt="Blaue Taste" loading="lazy">',
     },
     9: {
         id: 9,
