@@ -3,44 +3,6 @@ document.addEventListener("alpine:init", () => {
         page: "start",
         startUpStep: 1,
         planeText: "",
-        startUp: {
-            1: {
-                id: 1,
-                ar: true,
-                plane: "A",
-                title: "Schritt 1",
-                text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-                height: 1,
-                width: 1,
-                xpos: 0,
-                ypos: 0,
-                zpos: 0,
-                xrot: -90,
-                yrot: 0,
-                zrot: 0
-            },
-            2: {
-                id: 2,
-                ar: false,
-                title: "Schritt 2",
-                text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-            },
-            3: {
-                id: 3,
-                ar: true,
-                plane: "A",
-                title: "Schritt 3",
-                text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
-                height: .5,
-                width: 1,
-                xpos: 0,
-                ypos: 0,
-                zpos: 0,
-                xrot: -30,
-                yrot: 0,
-                zrot: 45
-            }
-        },
 
         resizePlane(height, width) {
             var element = document.getElementById("htmlElement");
@@ -69,10 +31,10 @@ document.addEventListener("alpine:init", () => {
         updateStep(step) {
             this.startUpStep = step;
 
-            if(this.startUp.ar) {
-                this.resizePlane(this.startUp[this.startUpStep].height, this.startUp[this.startUpStep].width);
-                this.movePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xpos, this.startUp[this.startUpStep].ypos, this.startUp[this.startUpStep].zpos);
-                this.rotatePlane("plane"+this.startUp[this.startUpStep].plane, this.startUp[this.startUpStep].xrot, this.startUp[this.startUpStep].yrot, this.startUp[this.startUpStep].zrot);
+            if(startUp.ar) {
+                this.resizePlane(startUp[this.startUpStep].height, startUp[this.startUpStep].width);
+                this.movePlane("plane"+startUp[this.startUpStep].plane, startUp[this.startUpStep].xpos, startUp[this.startUpStep].ypos, startUp[this.startUpStep].zpos);
+                this.rotatePlane("plane"+startUp[this.startUpStep].plane, startUp[this.startUpStep].xrot, startUp[this.startUpStep].yrot, startUp[this.startUpStep].zrot);
             } else {
                 // TODO...
             }
