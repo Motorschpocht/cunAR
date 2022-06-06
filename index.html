@@ -85,8 +85,7 @@
                 <button class="secondary" x-on:click="resetAll()" style="margin-top: 12px;" x-show="startUpStep != Object.keys(startUp).length">Inbetriebnahme abbrechen</button>
             </div>
 
-
-            <div class="expand"  x-on:click="expand = !expand">
+            <div class="expand" x-on:click="expand = !expand" x-show="page != 'map'">
                 <img src="static/img/expand.svg" alt="Expand">
             </div>
         </main>
@@ -94,7 +93,7 @@
         <div class="status green" x-show="startUp[startUpStep].ar">AR aktiv</div>
         <div class="status red" x-show="!startUp[startUpStep].ar">AR inaktiv</div>
         <div class="cover"></div>
-        <div class="shadow" x-show="!startUp[startUpStep].ar"></div>
+        <div class="shadow" x-show="!startUp[startUpStep].ar" x-transition.opacity></div>
         <div class="ar-content">
             <div id="htmlElement" class="frame" x-text="planeText"></div>
         </div>

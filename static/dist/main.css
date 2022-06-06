@@ -316,7 +316,7 @@ button img {
   border-radius: var(--border-radius-large);
   backdrop-filter: blur(24px);
   transform: rotate(90deg);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 .expand img {
