@@ -3,6 +3,7 @@ document.addEventListener("alpine:init", () => {
         page: "start",
         startUpStep: 1,
         planeText: "",
+        expand: false,
 
         resizePlane(height, width) {
             var element = document.getElementById("htmlElement");
