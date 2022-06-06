@@ -4,48 +4,64 @@ const startUp = {
         ar: false,
         title: 'Hauptschalter einschalten',
         content: '<p>Schalten Sie den Hauptschalter der Laborhalle auf "ON".</p><p>Er befindet sich hinter dem Vorgang auf der Rückseite der Halle.</p><img src="../static/img/hauptschalter.jpg" alt="Hauptschalter" loading="lazy">',
+        mapTop: 90,
+        mapLeft: 89
     },
     2: {
         id: 2,
         ar: false,
         title: 'Trocknungseinheit einschalten',
         content: '<p>Stellen Sie den Drehschalter der Trocknungseinheit auf "I".</p><p>Warten Sie auf die Bereitschaft des Gerätes und betätigen Sie die linke Taste mit der Aufschrift "ON".</p><img src="../static/img/trocknungseinheit.png" alt="Trocknungseinheit" loading="lazy">',
+        mapTop: 66,
+        mapLeft: 78
     },
     3: {
         id: 3,
         ar: false,
         title: 'Sauger einschalten',
         content: '<p>Stellen Sie den Drehschalter des Saugers auf "ON".</p><img src="../static/img/sauger.png" alt="Sauger" loading="lazy">',
+        mapTop: 35,
+        mapLeft: 76
     },
     4: {
         id: 4,
         ar: false,
         title: 'Dosiergerät einschalten',
         content: '<p>Stellen Sie den Kippschalter auf der Rückseite des Dosiergerätes auf "ON".</p><img src="../static/img/dosiergerät.jpg" alt="Dosiergerät" loading="lazy">',
+        mapTop: 28,
+        mapLeft: 62
     },
     5: {
         id: 5,
         ar: false,
         title: 'Robotereinheit einschalten',
         content: '<p>Stellen Sie den Drehschalter der Robotereinheit auf "ON".</p><img src="../static/img/robotereinheit.jpg" alt="Robotoreinheit" loading="lazy">',
+        mapTop: 23,
+        mapLeft: 45
     },
     6: {
         id: 6,
         ar: false,
         title: 'Laser einschalten',
-        content: '<p>Stellen Sie den Drehschalter auf der Rückschalter des Lasers auf "ON".</p><img src="../static/img/laser.jpg" alt="Laser" loading="lazy">',
+        content: '<p>Stellen Sie den Drehschalter auf der Rückseite des Lasers auf "ON".</p><img src="../static/img/laser.jpg" alt="Laser" loading="lazy">',
+        mapTop: 14,
+        mapLeft: 29
     },
     7: {
         id: 7,
         ar: false,
         title: 'Hintere Tür schließen und quittieren',
         content: '<p>Schließen Sie die hintere Maschinentür und quittieren Sie den Vorgang durch Betätigung der blauen Taste.</p><img src="../static/img/blauetaste.jpg" alt="Blaue Taste" loading="lazy">',
+        mapTop: 14,
+        mapLeft: 29
     },
     8: {
         id: 8,
         ar: false,
         title: 'Vordere Tür schließen und quittieren',
         content: '<p>Schließen Sie die vordere Tür vollständig und quittieren Sie den Vorgang durch Betätigung der blauen Taste mit der Aufschrift "R".</p><img src="../static/img/blauetaste.png" alt="Blaue Taste" loading="lazy">',
+        mapTop: 73,
+        mapLeft: 29
     },
     9: {
         id: 9,
@@ -60,7 +76,9 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
     10: {
         id: 10,
@@ -75,7 +93,9 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
     11: {
         id: 11,
@@ -90,31 +110,41 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
     12: {
         id: 12,
         ar: false,
         title: 'Robotereinstellungen vornehmen',
         content: '<p>Nehmen sie das KUKA smartPAD-2 in die Hand und drücken Sie die Taste "R" in der unteren rechten Ecke des Touchscreens.</p><img src="../static/img/rtaste.png" alt="Taste R" loading="lazy">',
+        mapTop: 21,
+        mapLeft: 41
     },
     13: {
         id: 13,
         ar: false,
         title: 'Robotereinstellungen vornehmen',
         content: '<p>Drehen Sie den Modusschalter mit dem Zahnradsymbol auf der Oberseite von "EXT" auf "T1".</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
+        mapTop: 21,
+        mapLeft: 41
     },
     14: {
         id: 14,
         ar: false,
         title: 'Robotereinstellungen vornehmen',
         content: '<p>Drehen Sie den Modusschalter wieder in die senkrechte Ausgangsposition.</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
+        mapTop: 21,
+        mapLeft: 41
     },
     15: {
         id: 15,
         ar: false,
         title: 'Robotereinstellungen vornehmen',
         content: '<p>Halten Sie die Taste auf der Rückseite des smartPADs mit der linken Hand gedrückt und drücken Sie mit der rechten Hand auf Start bis die Koordinaten auf dem Bildschirm erscheinen. Die Geschwindigkeit soll auf 0% stehen.</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
+        mapTop: 21,
+        mapLeft: 41
     },
     16: {
         id: 16,
@@ -129,10 +159,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    16: {
-        id: 16,
+    17: {
+        id: 17,
         ar: true,
         plane: 'A',
         title: 'Aufwärmprozess abwarten',
@@ -144,22 +176,28 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
-    },
-    17: {
-        id: 17,
-        ar: false,
-        title: 'Absaugung vorbereiten',
-        content: '<p>Stellen Sie den Schalter an der linken Seite des Schaltkastens der Absaugung auf die obere Position.</p><img src="../static/img/absaugung.png" alt="Absaugung" loading="lazy">',
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
     18: {
         id: 18,
         ar: false,
         title: 'Absaugung vorbereiten',
-        content: '<p>Ziehen Sie die Lüftungsklappe an der Unterseite der Absaugung auf.</p><img src="../static/img/lüftungsklappe.png" alt="Lüftungsklappe" loading="lazy">',
+        content: '<p>Stellen Sie den Schalter an der linken Seite des Schaltkastens der Absaugung auf die obere Position.</p><img src="../static/img/absaugung.png" alt="Absaugung" loading="lazy">',
+        mapTop: 67,
+        mapLeft: 54
     },
     19: {
         id: 19,
+        ar: false,
+        title: 'Absaugung vorbereiten',
+        content: '<p>Ziehen Sie die Lüftungsklappe an der Unterseite der Absaugung auf.</p><img src="../static/img/lüftungsklappe.png" alt="Lüftungsklappe" loading="lazy">',
+        mapTop: 66,
+        mapLeft: 78
+    },
+    20: {
+        id: 20,
         ar: true,
         plane: 'A',
         title: 'Materialreste entfernen',
@@ -171,10 +209,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    20: {
-        id: 20,
+    21: {
+        id: 21,
         ar: true,
         plane: 'A',
         title: 'Ausspritzautomatik starten',
@@ -186,16 +226,20 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
-    },
-    21: {
-        id: 21,
-        ar: false,
-        title: 'Düse reinigen',
-        content: '<p>Öffnen Sie die Abdeckung und Klappe des Aggregates und entfernen Sie die Materialreste.</p><p>Anschließend schließen Sie das Aggregat wieder.</p><img src="../static/img/düse.png" alt="Düse" loading="lazy">',
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
     22: {
         id: 22,
+        ar: false,
+        title: 'Düse reinigen',
+        content: '<p>Öffnen Sie die Abdeckung und Klappe des Aggregates und entfernen Sie die Materialreste.</p><p>Anschließend schließen Sie das Aggregat wieder.</p><img src="../static/img/düse.png" alt="Düse" loading="lazy">',
+        mapTop: 72,
+        mapLeft: 28
+    },
+    23: {
+        id: 23,
         ar: true,
         plane: 'A',
         title: 'Aggregat verfahren',
@@ -207,10 +251,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    23: {
-        id: 23,
+    24: {
+        id: 24,
         ar: true,
         plane: 'A',
         title: 'Ausspritzautomatik starten',
@@ -222,10 +268,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    24: {
-        id: 24,
+    25: {
+        id: 25,
         ar: true,
         plane: 'A',
         title: 'Dosierung einstellen',
@@ -237,10 +285,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    25: {
-        id: 25,
+    26: {
+        id: 26,
         ar: true,
         plane: 'A',
         title: 'Produktion starten',
@@ -252,10 +302,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    26: {
-        id: 26,
+    27: {
+        id: 27,
         ar: true,
         plane: 'A',
         title: 'Start drücken',
@@ -267,10 +319,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    27: {
-        id: 27,
+    28: {
+        id: 28,
         ar: true,
         plane: 'A',
         title: 'Produktion unterbrechen',
@@ -282,10 +336,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    28: {
-        id: 28,
+    29: {
+        id: 29,
         ar: true,
         plane: 'A',
         title: 'Automatik ausschalten',
@@ -297,22 +353,28 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
-    },
-    29: {
-        id: 29,
-        ar: false,
-        title: 'Unfertige Becher entfernen',
-        content: '<p>Öffnen Sie die Tür und entfernen Sie die unvollständigen Becher vorsichtig mit einem Hammer und dem bereitliegenden Metallwerkzeug.</p><img src="../static/img/düse.png" alt="Düse" loading="lazy">',
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
     30: {
         id: 30,
         ar: false,
-        title: 'Tür schließen und quittieren',
-        content: '<p>Schließen Sie die Tür und quittieren Sie mit der Taste "R".</p><img src="../static/img/düse.png" alt="Düse" loading="lazy">',
+        title: 'Unfertige Becher entfernen',
+        content: '<p>Öffnen Sie die Tür und entfernen Sie die unvollständigen Becher vorsichtig mit einem Hammer und dem bereitliegenden Metallwerkzeug.</p><img src="../static/img/düse.png" alt="Düse" loading="lazy">',
+        mapTop: 72,
+        mapLeft: 28
     },
     31: {
         id: 31,
+        ar: false,
+        title: 'Tür schließen und quittieren',
+        content: '<p>Schließen Sie die Tür und quittieren Sie mit der Taste "R".</p><img src="../static/img/düse.png" alt="Düse" loading="lazy">',
+        mapTop: 72,
+        mapLeft: 28
+    },
+    32: {
+        id: 32,
         ar: true,
         plane: 'A',
         title: 'Produktion starten',
@@ -324,10 +386,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
-    32: {
-        id: 32,
+    33: {
+        id: 33,
         ar: true,
         plane: 'A',
         title: 'Start drücken',
@@ -339,16 +403,20 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
-    },
-    33: {
-        id: 33,
-        ar: false,
-        title: 'Robotergeschwindigkeit hochfahren',
-        content: '<p>Erhöhen Sie die Geschwindigkeit des Roboters mithilfe des smartPADs während des Anfahrens auf 50% und anschließend auf 100%.</p><p>Die ersten zwei Becher werden automatisch als Ausschuss ausgeworfen, da sie von verminderter Qualität sind.</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
+        zrot: 0,
+        mapTop: 70,
+        mapLeft: 40
     },
     34: {
         id: 34,
+        ar: false,
+        title: 'Robotergeschwindigkeit hochfahren',
+        content: '<p>Erhöhen Sie die Geschwindigkeit des Roboters mithilfe des smartPADs während des Anfahrens auf 50% und anschließend auf 100%.</p><p>Die ersten zwei Becher werden automatisch als Ausschuss ausgeworfen, da sie von verminderter Qualität sind.</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
+        mapTop: 21,
+        mapLeft: 41
+    },
+    35: {
+        id: 35,
         ar: true,
         plane: 'B',
         title: 'Laser einstellen',
@@ -360,10 +428,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 15,
+        mapLeft: 11
     },
-    35: {
-        id: 35,
+    36: {
+        id: 36,
         ar: true,
         plane: 'B',
         title: 'Laser einstellen',
@@ -375,10 +445,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 15,
+        mapLeft: 11
     },
-    36: {
-        id: 36,
+    37: {
+        id: 37,
         ar: true,
         plane: 'B',
         title: 'Laser einstellen',
@@ -390,10 +462,12 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 15,
+        mapLeft: 11
     },
-    37: {
-        id: 37,
+    38: {
+        id: 38,
         ar: true,
         plane: 'B',
         title: 'Laser einstellen',
@@ -405,12 +479,16 @@ const startUp = {
         zpos: 0,
         xrot: -90,
         yrot: 0,
-        zrot: 0
+        zrot: 0,
+        mapTop: 15,
+        mapLeft: 11
     },
-    38: {
-        id: 38,
+    39: {
+        id: 39,
         ar: false,
         title: 'Inbetriebnahme abgeschlossen',
         content: '<p>Die CUNA-Produktion ist nun vollständig in Betrieb genommen.</p><p>Mithilfe der grünen Taste lässt sich der Antrieb des Förderbandes manuell steuern.</p><img src="../static/img/förderband.png" alt="Förderband" loading="lazy">',
+        mapTop: 15,
+        mapLeft: 11
     }
 };

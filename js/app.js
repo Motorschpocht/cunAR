@@ -3,7 +3,7 @@ document.addEventListener("alpine:init", () => {
         page: "start",
         startUpStep: 1,
         planeText: "",
-        expand: false,
+        expand: true,
 
         resizePlane(height, width) {
             var element = document.getElementById("htmlElement");
@@ -32,6 +32,10 @@ document.addEventListener("alpine:init", () => {
         updateStep(step) {
             this.startUpStep = step;
 
+            if(startUp[this.startUpStep].mapTop && startUp[this.startUpStep].mapLeft) {
+                this.updateMapPin(startUp[this.startUpStep].mapTop, startUp[this.startUpStep].mapLeft);
+            }
+
             if(startUp.ar) {
                 this.resizePlane(startUp[this.startUpStep].height, startUp[this.startUpStep].width);
                 this.movePlane("plane"+startUp[this.startUpStep].plane, startUp[this.startUpStep].xpos, startUp[this.startUpStep].ypos, startUp[this.startUpStep].zpos);
@@ -39,6 +43,12 @@ document.addEventListener("alpine:init", () => {
             } else {
                 // TODO...
             }
+        },
+
+        updateMapPin(top, left) {
+            var pin = document.getElementById("pin");
+            pin.style.top = "calc(" + top + "% - 12px)";
+            pin.style.left = "calc(" + left + "% - 12px)";
         },
 
         resetAll() {
