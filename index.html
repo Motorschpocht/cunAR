@@ -26,13 +26,13 @@
                     <p>Einige der Schritte werden durch Elemente der Augmented Reality erweitert. Die Erkennung erfolgt dabei mithilfe von Markern, welche an der Maschine angebracht wurden.</p>
                 </div>
                 <div class="buttons">
-                    <button x-on:click="updatePage('startUp')">Inbetriebnahme starten</button>
+                    <button style="flex: 1;" x-on:click="updatePage('startUp')">Inbetriebnahme starten</button>
                 </div>
             </div>
             
             <div id="startUp" class="content" x-show="page == 'startUp'">
                 <div class="headline">
-                    <h1>Inbetriebnahme</h1>
+                    <h1>cunAR</h1>
                     <div class="page">
                         <span x-text="startUpStep"></span>
                         <span>/</span>
@@ -46,9 +46,14 @@
                     </div>
                 </template>
                 <div class="buttons">
-                    <button  x-on:click="updateStep(startUpStep-1)" x-show="startUpStep > 1">Zurück</button>
-                    <button  x-on:click="updateStep(startUpStep+1)" x-show="startUpStep < Object.keys(startUp).length">Weiter</button>
-                    <button  x-on:click="resetAll()" x-show="startUpStep == Object.keys(startUp).length">Abschließen</button>
+                    <button :disabled="startUpStep == 1" x-on:click="updateStep(startUpStep-1)">
+                        <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
+                    </button>
+                    <button style="flex: 1;" x-show="startUpStep != Object.keys(startUp).length">Karte</button>
+                    <button x-on:click="updateStep(startUpStep+1)" x-show="startUpStep < Object.keys(startUp).length">
+                        <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
+                    </button>
+                    <button x-on:click="resetAll()" style="flex: 1;" x-show="startUpStep == Object.keys(startUp).length">Beenden</button>
                 </div>
                 <button class="secondary" x-on:click="resetAll()" style="margin-top: 12px;" x-show="startUpStep != Object.keys(startUp).length">Inbetriebnahme abbrechen</button>
             </div>

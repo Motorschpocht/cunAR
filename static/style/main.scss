@@ -48,6 +48,7 @@ main {
     backdrop-filter: blur(24px);
     z-index: 2;
     user-select: none;
+    backface-visibility: hidden;
     transition: top .3s ease, max-width .3s ease;
 
     &.expanded {
@@ -100,7 +101,7 @@ h1 {
 }
 
 h2 {
-    margin: 12px 0;
+    margin: 0 0 12px;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.4;
@@ -133,16 +134,24 @@ button {
         background: transparent;
         box-shadow: inset 0 0 0 1px var(--text);
     }
+
+    &[disabled] {
+        opacity: .5;
+        cursor: default;
+    }
+
+    img {
+        height: 16px;
+        width: 16px;
+        margin: 0;
+    }
 }
 
 .buttons {
     display: flex;
+    justify-content: stretch;
     gap: 12px;
     margin-top: 12px;
-
-    button {
-        flex: 1;
-    }
 }
 
 .status {
@@ -155,6 +164,7 @@ button {
     font-weight: 500;
     padding: 14px 18px;
     z-index: 3;
+    backface-visibility: hidden;
 
     &.green {
         background-color: var(--green);
@@ -175,7 +185,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 4px;
     background: var(--background);
     border-radius: var(--border-radius-large);
     backdrop-filter: blur(24px);
