@@ -18,7 +18,7 @@
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
-        <main :class="expand ? 'expanded' : ''">
+        <main :class="expand || page == 'map' ? 'expanded' : ''">
             <div class="content" x-show="page == 'start'">
                 <h1>cunAR</h1>
                 <div class="body">
