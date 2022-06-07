@@ -137,12 +137,13 @@ body {
 
 main {
   position: fixed;
-  top: 24px;
   right: 24px;
   bottom: 24px;
-  width: 100%;
-  max-width: 30vw;
-  min-width: 384px;
+  height: 100%;
+  max-height: 202px;
+  width: 50vw;
+  max-width: 1024px;
+  min-width: 512px;
   display: flex;
   flex-direction: column;
   padding: 24px;
@@ -151,14 +152,14 @@ main {
   backdrop-filter: blur(24px);
   z-index: 2;
   backface-visibility: hidden;
-  transition: top 0.3s ease, max-width 0.3s ease;
-  will-change: top, max-width;
+  transition: max-height 0.3s ease;
+  will-change: max-height;
 }
 main.expanded {
-  max-width: 50vw;
+  max-height: calc(100vh - 112px);
 }
 main.expanded .expand {
-  transform: rotate(-90deg);
+  transform: rotate(0);
 }
 main .content {
   max-height: 100%;
@@ -189,7 +190,7 @@ main .content .body {
   overflow-y: auto;
 }
 main .content .body.map {
-  margin: 12px -24px 0;
+  margin: 0 -24px;
   padding: 0 24px;
   display: flex;
   align-items: center;
@@ -229,6 +230,7 @@ h1 {
   margin: 4px 0;
   font-size: 28px;
   font-weight: 500;
+  letter-spacing: -0.5px;
   line-height: 1.2;
 }
 
@@ -304,8 +306,8 @@ button img {
 
 .expand {
   position: absolute;
-  top: 0;
-  left: -60px;
+  top: -64px;
+  right: 0;
   height: 48px;
   width: 48px;
   min-width: 48px;
@@ -315,7 +317,7 @@ button img {
   background: var(--background);
   border-radius: var(--border-radius-large);
   backdrop-filter: blur(24px);
-  transform: rotate(90deg);
+  transform: rotate(180deg);
   transition: all 0.2s ease;
   cursor: pointer;
 }
@@ -338,26 +340,19 @@ button img {
 
 @media only screen and (max-width: 768px) {
   main {
-    top: 50vh;
     right: 16px;
     bottom: 16px;
     left: 16px;
-    height: auto;
+    width: auto;
     min-width: auto;
-    max-width: calc(100% - 32px);
   }
   main.expanded {
-    top: 80px;
-    max-width: calc(100% - 32px);
-  }
-  main.expanded .expand {
-    transform: rotate(0deg);
+    max-height: calc(100vh - 96px);
   }
 
   .expand {
     top: -64px;
     right: 0;
-    left: auto;
     transform: rotate(180deg);
   }
 

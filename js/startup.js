@@ -50,7 +50,7 @@ const startUp = {
     7: {
         id: 7,
         ar: false,
-        title: 'Hintere Tür schließen und quittieren',
+        title: 'Hintere Tür schließen',
         content: '<p>Schließen Sie die hintere Maschinentür und quittieren Sie den Vorgang durch Betätigung der blauen Taste.</p><img src="../static/img/blauetaste.jpg" alt="Blaue Taste" loading="lazy">',
         mapTop: 14,
         mapLeft: 29
@@ -58,7 +58,7 @@ const startUp = {
     8: {
         id: 8,
         ar: false,
-        title: 'Vordere Tür schließen und quittieren',
+        title: 'Vordere Tür schließen',
         content: '<p>Schließen Sie die vordere Tür vollständig und quittieren Sie den Vorgang durch Betätigung der blauen Taste mit der Aufschrift "R".</p><img src="../static/img/blauetaste.png" alt="Blaue Taste" loading="lazy">',
         mapTop: 73,
         mapLeft: 29
@@ -67,7 +67,7 @@ const startUp = {
         id: 9,
         ar: true,
         plane: 'A',
-        title: 'Linke Pfeiltaste drücken und halten',
+        title: 'Linke Pfeiltaste halten',
         content: '<p>Die Pfeiltaste auf der rechten Bildschirmseite blinkt. Halten Sie die Taste gedrückt.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
         width: 1,
@@ -117,7 +117,7 @@ const startUp = {
     12: {
         id: 12,
         ar: false,
-        title: 'Robotereinstellungen vornehmen',
+        title: 'Roboter einstellen',
         content: '<p>Nehmen sie das KUKA smartPAD-2 in die Hand und drücken Sie die Taste "R" in der unteren rechten Ecke des Touchscreens.</p><img src="../static/img/rtaste.png" alt="Taste R" loading="lazy">',
         mapTop: 21,
         mapLeft: 41
@@ -125,7 +125,7 @@ const startUp = {
     13: {
         id: 13,
         ar: false,
-        title: 'Robotereinstellungen vornehmen',
+        title: 'Roboter einstellen',
         content: '<p>Drehen Sie den Modusschalter mit dem Zahnradsymbol auf der Oberseite von "EXT" auf "T1".</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
         mapTop: 21,
         mapLeft: 41
@@ -133,7 +133,7 @@ const startUp = {
     14: {
         id: 14,
         ar: false,
-        title: 'Robotereinstellungen vornehmen',
+        title: 'Roboter einstellen',
         content: '<p>Drehen Sie den Modusschalter wieder in die senkrechte Ausgangsposition.</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
         mapTop: 21,
         mapLeft: 41
@@ -141,7 +141,7 @@ const startUp = {
     15: {
         id: 15,
         ar: false,
-        title: 'Robotereinstellungen vornehmen',
+        title: 'Roboter einstellen',
         content: '<p>Halten Sie die Taste auf der Rückseite des smartPADs mit der linken Hand gedrückt und drücken Sie mit der rechten Hand auf Start bis die Koordinaten auf dem Bildschirm erscheinen. Die Geschwindigkeit soll auf 0% stehen.</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
         mapTop: 21,
         mapLeft: 41
@@ -150,7 +150,7 @@ const startUp = {
         id: 16,
         ar: true,
         plane: 'A',
-        title: 'Maschine in Grundstellung fahren',
+        title: 'In Grundstellung fahren',
         content: '<p>Halten Sie die Taste gedrückt und drücken Sie währenddessen einmalig auf Start. Die Maschine beginnt mit der Fahrt in die Grundstellung.</p><p>Um fortzufahren erhöhen Sie die Geschwindigkeit auf ca. 10% durch Drücken der Taste "F2"</p><p>Wenn die Taste nicht mehr blinkt wurde die Grundstellung erreicht und Sie können die Geschwindigkeit auf 0% reduzieren.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
         width: 1,
@@ -184,7 +184,7 @@ const startUp = {
         id: 18,
         ar: false,
         title: 'Absaugung vorbereiten',
-        content: '<p>Stellen Sie den Schalter an der linken Seite des Schaltkastens der Absaugung auf die obere Position.</p><img src="../static/img/absaugung.png" alt="Absaugung" loading="lazy">',
+        content: '<p>Stellen Sie den Schalter an der linken Seite des Schaltkastens der Absaugung auf die obere Position.</p><img src="../static/img/absaugung.jpg" alt="Absaugung" loading="lazy">',
         mapTop: 67,
         mapLeft: 54
     },
@@ -410,7 +410,7 @@ const startUp = {
     34: {
         id: 34,
         ar: false,
-        title: 'Robotergeschwindigkeit hochfahren',
+        title: 'Roboter beschleunigen',
         content: '<p>Erhöhen Sie die Geschwindigkeit des Roboters mithilfe des smartPADs während des Anfahrens auf 50% und anschließend auf 100%.</p><p>Die ersten zwei Becher werden automatisch als Ausschuss ausgeworfen, da sie von verminderter Qualität sind.</p><img src="../static/img/smartpad.jpg" alt="smartPAD" loading="lazy">',
         mapTop: 21,
         mapLeft: 41

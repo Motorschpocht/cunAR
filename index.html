@@ -18,12 +18,14 @@
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
-        <main :class="expand || page == 'map' ? 'expanded' : ''">
+        <main :class="expand ? 'expanded' : ''">
             <div class="content" x-show="page == 'start'">
                 <h1>cunAR</h1>
                 <div class="body">
-                    <p>Diese App enthält eine geführte Inbetriebnahme der CUNA-Produktion in der SmartFactoryOWL.</p>
-                    <p>Einige der Schritte werden durch Elemente der Augmented Reality erweitert. Die Erkennung erfolgt dabei mithilfe von Markern, welche an der Maschine angebracht wurden.</p>
+                    <span x-show="expand" x-transition.opacity>
+                        <p>Diese App enthält eine geführte Inbetriebnahme der CUNA-Produktion in der SmartFactoryOWL.</p>
+                        <p>Einige der Schritte werden durch Elemente der Augmented Reality erweitert. Die Erkennung erfolgt dabei mithilfe von Markern, welche an der Maschine angebracht wurden.</p>
+                    </span>
                 </div>
                 <div class="buttons">
                     <button style="flex: 1;" x-on:click="updatePage('startUp')">Inbetriebnahme starten</button>
@@ -41,10 +43,13 @@
                 </div>
                 <div class="body">
                     <h2 x-text="startUp[startUpStep].title"></h2>
-                    <p x-html="startUp[startUpStep].content"></p>
+                    <p x-html="startUp[startUpStep].content" x-show="expand" x-transition.opacity></p>
                 </div>
                 <div class="buttons">
-                    <button :disabled="startUpStep == 1" x-on:click="updateStep(startUpStep-1)">
+                    <button x-on:click="resetAll()" x-show="startUpStep == 1">
+                        <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
+                    </button>
+                    <button x-on:click="updateStep(startUpStep-1)" x-show="startUpStep > 1">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
                     </button>
                     <button x-on:click="updatePage('map')" style="flex: 1;">Lageplan</button>
@@ -53,7 +58,6 @@
                     </button>
                     <button x-on:click="resetAll()" x-show="startUpStep == Object.keys(startUp).length">Beenden</button>
                 </div>
-                <button class="secondary" x-on:click="resetAll()" style="margin-top: 12px;" x-show="startUpStep != Object.keys(startUp).length">Inbetriebnahme abbrechen</button>
             </div>
 
             <div id="map" class="content" x-show="page == 'map'">
@@ -67,13 +71,16 @@
                 </div>
                 <h2 x-text="startUp[startUpStep].title" style="margin-top: 12px;"></h2>
                 <div class="body map">
-                    <div class="map-content">
+                    <div class="map-content" x-show="expand" x-transition.opacity>
                         <img src="static/img/lageplan.svg" alt="Lageplan">
                         <div id="pin" class="pin"></div>
                     </div>
                 </div>
                 <div class="buttons">
-                    <button :disabled="startUpStep == 1" x-on:click="updateStep(startUpStep-1)">
+                    <button x-on:click="resetAll()" x-show="startUpStep == 1">
+                        <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
+                    </button>
+                    <button x-on:click="updateStep(startUpStep-1)" x-show="startUpStep > 1">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
                     </button>
                     <button x-on:click="updatePage('startUp')" style="flex: 1;">Anleitung</button>
@@ -82,16 +89,15 @@
                     </button>
                     <button x-on:click="resetAll()" x-show="startUpStep == Object.keys(startUp).length">Beenden</button>
                 </div>
-                <button class="secondary" x-on:click="resetAll()" style="margin-top: 12px;" x-show="startUpStep != Object.keys(startUp).length">Inbetriebnahme abbrechen</button>
             </div>
 
-            <div class="expand" x-on:click="expand = !expand" x-show="page != 'map'">
+            <div class="expand" x-on:click="expand = !expand">
                 <img src="static/img/expand.svg" alt="Expand">
             </div>
         </main>
 
-        <div class="status green" x-show="startUp[startUpStep].ar">AR aktiv</div>
-        <div class="status red" x-show="!startUp[startUpStep].ar">AR inaktiv</div>
+        <div class="status green" x-show="startUp[startUpStep].ar" x-transition.opacity>AR aktiv</div>
+        <div class="status red" x-show="!startUp[startUpStep].ar" x-transition.opacity>AR inaktiv</div>
         <div class="cover"></div>
         <div class="shadow" x-show="!startUp[startUpStep].ar" x-transition.opacity></div>
         <div class="ar-content">
