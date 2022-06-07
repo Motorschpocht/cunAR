@@ -20,8 +20,8 @@ html {
 
     --text: #1d1d1d;
     --accent: #f5c592;
-    --green: rgb(45,184,131,.8);
-    --red: rgba(235,87,87.8);
+    --green: #2db883;
+    --red: #eb5757;
     --background: rgba(255,255,255,.6);
 
     --border-radius-large: 24px;
@@ -237,6 +237,7 @@ button {
     backdrop-filter: blur(24px);
     transform: rotate(180deg);
     transition: all .1s ease;
+    z-index: 2;
     cursor: pointer;
 
     img {
