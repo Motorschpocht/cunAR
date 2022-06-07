@@ -93,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="expand" x-on:click="expand = !expand">
+            <div class="expand" x-on:click="expand = !expand" x-show="page != 'start'" x-transition.opacity>
                 <img src="static/img/expand.svg" alt="Expand">
             </div>
         </main>

@@ -127,7 +127,7 @@ html {
   --red: rgba(235,87,87.8);
   --background: rgba(255,255,255,.6);
   --border-radius-large: 24px;
-  --border-radius-small: 8px;
+  --border-radius-small: 12px;
 }
 
 body {
@@ -251,7 +251,7 @@ img {
   max-height: 384px;
   max-width: 100%;
   display: block;
-  margin: 24px auto 0;
+  margin: 32px auto 0;
   border-radius: var(--border-radius-small);
 }
 
