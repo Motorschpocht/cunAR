@@ -20,8 +20,8 @@ html {
 
     --text: #1d1d1d;
     --accent: #f5c592;
-    --green: #2db883;
-    --red: #eb5757;
+    --green: rgb(45,184,131,.8);
+    --red: rgba(235,87,87.8);
     --background: rgba(255,255,255,.6);
 
     --border-radius-large: 24px;
@@ -50,11 +50,11 @@ main {
     backdrop-filter: blur(24px);
     z-index: 2;
     backface-visibility: hidden;
-    transition: max-height .3s ease;
+    transition: max-height .4s ease;
     will-change: max-height;
 
     &.expanded {
-        max-height: calc(100vh - 112px);
+        max-height: calc(100% - 112px);
 
         .expand {
             transform: rotate(0);
@@ -171,7 +171,7 @@ button {
     font-weight: 500;
     color: var(--text);
     background: var(--accent);
-    border-radius: var(--border-radius-small);
+    border-radius: var(--border-radius-large);
     cursor: pointer;
 
     &.secondary {
@@ -192,8 +192,10 @@ button {
 }
 
 .buttons {
+    min-width: 256px;
     display: flex;
     justify-content: stretch;
+    align-self: flex-end;
     gap: 12px;
     margin-top: 12px;
 }
@@ -202,11 +204,12 @@ button {
     position: fixed;
     top: 24px;
     left: 24px;
+    padding: 14px 18px;
     color: var(--text);
     border-radius: var(--border-radius-large);
+    backdrop-filter: blur(24px);
     font-size: 20px;
     font-weight: 500;
-    padding: 14px 18px;
     z-index: 3;
     backface-visibility: hidden;
 
@@ -233,7 +236,7 @@ button {
     border-radius: var(--border-radius-large);
     backdrop-filter: blur(24px);
     transform: rotate(180deg);
-    transition: all .2s ease;
+    transition: all .1s ease;
     cursor: pointer;
 
     img {
@@ -263,8 +266,12 @@ button {
         min-width: auto;
 
         &.expanded {
-            max-height: calc(100vh - 96px);
+            max-height: calc(100% - 96px);
         }
+    }
+
+    .buttons {
+        align-self: center;
     }
 
     .expand {

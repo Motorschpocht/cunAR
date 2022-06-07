@@ -56,7 +56,9 @@
                     <button x-on:click="updateStep(startUpStep+1)" x-show="startUpStep < Object.keys(startUp).length">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
                     </button>
-                    <button x-on:click="resetAll()" x-show="startUpStep == Object.keys(startUp).length">Beenden</button>
+                    <button x-on:click="resetAll()" x-show="startUpStep == Object.keys(startUp).length">
+                        <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
+                    </button>
                 </div>
             </div>
 
