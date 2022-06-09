@@ -13,8 +13,11 @@
     </head>
     <body x-data="app" style="margin: 0; overflow: hidden;">
         <a-scene embedded arjs vr-mode-ui="enabled: false" loading-screen="enabled: false"">
-            <a-marker preset="custom" type="pattern" url="static/marker/marker-a.patt">
-                <a-plane id="planeA" rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60;"></a-plane>
+            <a-marker preset="custom" type="pattern" url="static/marker/marker-cup.patt">
+                <a-plane id="planeCup" rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60;"></a-plane>
+            </a-marker>
+            <a-marker preset="custom" type="pattern" url="static/marker/marker-laser.patt">
+                <a-plane id="planeLaser" rotation="-90 0 0" material="shader: html; target: #htmlElement; ratio: width; fps: 60;"></a-plane>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
@@ -98,10 +101,10 @@
             </div>
         </main>
 
-        <div class="status green" x-show="startUp[startUpStep].ar" x-transition.opacity>AR aktiv</div>
-        <div class="status red" x-show="!startUp[startUpStep].ar" x-transition.opacity>AR inaktiv</div>
+        <div class="status green" x-show="startUp[startUpStep].ar || page == 'start'" x-transition.opacity>AR aktiv</div>
+        <div class="status red" x-show="!startUp[startUpStep].ar && page != 'start'" x-transition.opacity>AR inaktiv</div>
         <div class="cover"></div>
-        <div class="shadow" x-show="!startUp[startUpStep].ar" x-transition.opacity></div>
+        <div class="shadow" x-show="!startUp[startUpStep].ar && page != 'start'" x-transition.opacity></div>
         <div class="ar-content">
             <div id="htmlElement" class="frame" x-text="planeText"></div>
         </div>
