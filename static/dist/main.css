@@ -329,6 +329,7 @@ button img {
 }
 
 .frame {
+  display: block;
   min-height: 1000px;
   min-width: 1000px;
   padding: 48px 64px;
