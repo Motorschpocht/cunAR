@@ -31,35 +31,35 @@
                     </span>
                 </div>
                 <div class="buttons">
-                    <button style="flex: 1;" x-on:click="updatePage('startUp')">Inbetriebnahme starten</button>
+                    <button style="flex: 1;" x-on:click="updatePage('manual')">Inbetriebnahme starten</button>
                 </div>
             </div>
             
-            <div id="startUp" class="content" x-show="page == 'startUp'">
+            <div id="manual" class="content" x-show="page == 'manual'">
                 <div class="headline">
                     <h1>Anleitung</h1>
                     <div class="page">
-                        <span x-text="startUpStep"></span>
+                        <span x-text="manualStep"></span>
                         <span>/</span>
-                        <span x-text="Object.keys(startUp).length"></span>
+                        <span x-text="Object.keys(manual).length"></span>
                     </div>
                 </div>
                 <div class="body">
-                    <h2 x-text="startUp[startUpStep].title"></h2>
-                    <p x-html="startUp[startUpStep].content" x-show="expand" x-transition.opacity></p>
+                    <h2 x-text="manual[manualStep].title"></h2>
+                    <p x-html="manual[manualStep].content" x-show="expand" x-transition.opacity></p>
                 </div>
                 <div class="buttons">
-                    <button x-on:click="resetAll()" x-show="startUpStep == 1">
+                    <button x-on:click="resetAll()" x-show="manualStep == 1">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
                     </button>
-                    <button x-on:click="updateStep(startUpStep-1)" x-show="startUpStep > 1">
+                    <button x-on:click="updateStep(manualStep-1)" x-show="manualStep > 1">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
                     </button>
                     <button x-on:click="updatePage('map')" style="flex: 1;">Lageplan</button>
-                    <button x-on:click="updateStep(startUpStep+1)" x-show="startUpStep < Object.keys(startUp).length">
+                    <button x-on:click="updateStep(manualStep+1)" x-show="manualStep < Object.keys(manual).length">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
                     </button>
-                    <button x-on:click="resetAll()" x-show="startUpStep == Object.keys(startUp).length">
+                    <button x-on:click="resetAll()" x-show="manualStep == Object.keys(manual).length">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
                     </button>
                 </div>
@@ -69,12 +69,12 @@
                 <div class="headline">
                     <h1>Lageplan</h1>
                     <div class="page">
-                        <span x-text="startUpStep"></span>
+                        <span x-text="manualStep"></span>
                         <span>/</span>
-                        <span x-text="Object.keys(startUp).length"></span>
+                        <span x-text="Object.keys(manual).length"></span>
                     </div>
                 </div>
-                <h2 x-text="startUp[startUpStep].title" style="margin-top: 12px;"></h2>
+                <h2 x-text="manual[manualStep].title" style="margin-top: 12px;"></h2>
                 <div class="body map">
                     <div class="map-content" x-show="expand" x-transition.opacity>
                         <img src="static/img/lageplan.svg" alt="Lageplan">
@@ -82,17 +82,17 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <button x-on:click="resetAll()" x-show="startUpStep == 1">
+                    <button x-on:click="resetAll()" x-show="manualStep == 1">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
                     </button>
-                    <button x-on:click="updateStep(startUpStep-1)" x-show="startUpStep > 1">
+                    <button x-on:click="updateStep(manualStep-1)" x-show="manualStep > 1">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(90deg);">
                     </button>
-                    <button x-on:click="updatePage('startUp')" style="flex: 1;">Anleitung</button>
-                    <button x-on:click="updateStep(startUpStep+1)" x-show="startUpStep < Object.keys(startUp).length">
+                    <button x-on:click="updatePage('manual')" style="flex: 1;">Anleitung</button>
+                    <button x-on:click="updateStep(manualStep+1)" x-show="manualStep < Object.keys(manual).length">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
                     </button>
-                    <button x-on:click="resetAll()" x-show="startUpStep == Object.keys(startUp).length">Beenden</button>
+                    <button x-on:click="resetAll()" x-show="manualStep == Object.keys(manual).length">Beenden</button>
                 </div>
             </div>
 
@@ -101,15 +101,18 @@
             </div>
         </main>
 
-        <div class="status green" x-show="startUp[startUpStep].ar || page == 'start'" x-transition.opacity>AR aktiv</div>
-        <div class="status red" x-show="!startUp[startUpStep].ar && page != 'start'" x-transition.opacity>AR inaktiv</div>
-        <div class="cover"></div>
-        <div class="shadow" x-show="!startUp[startUpStep].ar && page != 'start'" x-transition.opacity></div>
-        <div class="ar-content">
-            <div id="htmlElementCup" class="frame" v-show="startUp[startUpStep].ar || page == 'start'" x-transition.opacity></div>
-            <div id="htmlElementLaser" class="frame" v-show="startUp[startUpStep].ar || page == 'start'" x-transition.opacity></div>
+        <div class="info status green" x-show="manual[manualStep].ar || page == 'start'" x-transition.opacity>AR aktiv</div>
+        <div class="info status red" x-show="!manual[manualStep].ar && page != 'start'" x-transition.opacity>AR inaktiv</div>
+        <div class="marker" x-show="manual[manualStep].ar" x-transition.opacity>
+            <img :src="manual[manualStep].ar ? 'static/marker/'+manual[manualStep].marker+'.png' : 'static/marker/Blank.png'" alt="Marker" x-show="manual[manualStep].ar" x-transition.opacity>
         </div>
-        <script src="js/startup.js"></script>
+        <div class="cover"></div>
+        <div class="shadow" x-show="!manual[manualStep].ar && page != 'start'" x-transition.opacity></div>
+        <div class="ar-content"  v-show="manual[manualStep].ar || page == 'start'">
+            <div id="htmlElementCup" class="frame" style="display: none;" x-show="manual[manualStep].marker == 'Cup' || page == 'start'" x-transition.opacity></div>
+            <div id="htmlElementLaser" class="frame" style="display: none;" x-show="manual[manualStep].marker == 'Laser'" x-transition.opacity></div>
+        </div>
+        <script src="js/manual.js"></script>
         <script src="js/app.js"></script>
         <script src="js/alpine.min.js" defer></script>
     </body>

@@ -44,7 +44,7 @@ main {
     min-width: 512px;
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: 32px;
     background: var(--background);
     border-radius: var(--border-radius-large);
     backdrop-filter: blur(24px);
@@ -200,18 +200,22 @@ button {
     margin-top: 12px;
 }
 
-.status {
+.info {
     position: fixed;
     top: 24px;
     left: 24px;
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+    backface-visibility: hidden;
+}
+
+.status {
     padding: 14px 18px;
     color: var(--text);
     border-radius: var(--border-radius-large);
-    backdrop-filter: blur(24px);
     font-size: 20px;
     font-weight: 500;
-    z-index: 3;
-    backface-visibility: hidden;
 
     &.green {
         background-color: var(--green);
@@ -219,6 +223,23 @@ button {
 
     &.red {
         background-color: var(--red);
+    }
+}
+
+.marker {
+    position: fixed;
+    top: auto;
+    bottom: 24px;
+    left: 24px;
+    height: 96px;
+    width: 96px;
+    padding: 12px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    img {
+        margin: 0;
     }
 }
 
@@ -265,6 +286,7 @@ button {
         left: 16px;
         width: auto;
         min-width: auto;
+        padding: 24px;
 
         &.expanded {
             max-height: calc(100% - 96px);
@@ -281,9 +303,18 @@ button {
         transform: rotate(180deg);
     }
 
-    .status {
+    .info {
         top: 16px;
         left: 16px;
+    }
+
+    .marker {
+        top: 16px;
+        bottom: auto;
+        left: 140px;
+        height: 48px;
+        width: 48px;
+        padding: 4px;
     }
 }
 

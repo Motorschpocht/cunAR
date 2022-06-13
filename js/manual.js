@@ -1,4 +1,4 @@
-const startUp = {
+const manual = {
     1: {
         id: 1,
         ar: false,
@@ -66,7 +66,7 @@ const startUp = {
     9: {
         id: 9,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Linke Pfeiltaste halten',
         content: '<p>Die Pfeiltaste auf der rechten Bildschirmseite blinkt. Halten Sie die Taste gedrückt.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -83,14 +83,14 @@ const startUp = {
     10: {
         id: 10,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Hydraulikmotor einschalten',
         content: '<p>Drücken Sie die Taste auf der unteren linken Bildschirmseite, um den Hydraulikmotor einzuschalten.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
         width: 1,
-        xpos: 1,
-        ypos: 1,
-        zpos: 1,
+        xpos: 0,
+        ypos: 0,
+        zpos: 0,
         xrot: -90,
         yrot: 0,
         zrot: 0,
@@ -100,7 +100,7 @@ const startUp = {
     11: {
         id: 11,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Heizung einschalten',
         content: '<p>Drücken Sie die Taste auf der unteren linken Bildschirmseite, um die Heizung einzuschalten.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -149,7 +149,7 @@ const startUp = {
     16: {
         id: 16,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'In Grundstellung fahren',
         content: '<p>Halten Sie die Taste gedrückt und drücken Sie währenddessen einmalig auf Start. Die Maschine beginnt mit der Fahrt in die Grundstellung.</p><p>Um fortzufahren erhöhen Sie die Geschwindigkeit auf ca. 10% durch Drücken der Taste "F2"</p><p>Wenn die Taste nicht mehr blinkt wurde die Grundstellung erreicht und Sie können die Geschwindigkeit auf 0% reduzieren.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -166,7 +166,7 @@ const startUp = {
     17: {
         id: 17,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Aufwärmprozess abwarten',
         content: '<p>Die Maschine heizt nun auf, die verbleibende Wartezeit wird eingeblendet. Sie können in der Zwischenzeit mit den nächsten Schritten fortfahren.</p><img src="../static/img/aufwärmprozess.png" alt="Aufwärmprozess" loading="lazy">',
         height: 1,
@@ -199,7 +199,7 @@ const startUp = {
     20: {
         id: 20,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Materialreste entfernen',
         content: '<p>Drücken Sie auf die Taste "XY", um die Pressform aufzufahren.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -216,7 +216,7 @@ const startUp = {
     21: {
         id: 21,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Ausspritzautomatik starten',
         content: '<p>Drücken Sie auf die Taste "XY" zweimal, um die Ausspritzautomatik des Aggregats zu starten.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -241,7 +241,7 @@ const startUp = {
     23: {
         id: 23,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Aggregat verfahren',
         content: '<p>Drücken Sie auf die Taste "XY", um das Aggregat zu verfahren. Dies ermöglicht ein Stück Pappe unterhalb des Aggregates zu verfahren um Materialreste aufzufangen.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -258,7 +258,7 @@ const startUp = {
     24: {
         id: 24,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Ausspritzautomatik starten',
         content: '<p>Schließen Sie die Tür und drücken Sie auf die Taste "XY", um die Ausspritzautomatik zu starten</p><p>Prüfen Sie anschließend ob eventuell vorhandene Materialfäden händisch zu entfernen sind</p><p>Entnehmen Sie das Stück Pappe mit den Materialresten und schließen Sie die Tür wieder.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -275,7 +275,7 @@ const startUp = {
     25: {
         id: 25,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Dosierung einstellen',
         content: '<p>Stellen Sie die Dosierung auf 140 durch Drücken der Taste "XY".</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -292,7 +292,7 @@ const startUp = {
     26: {
         id: 26,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Produktion starten',
         content: '<p>Drücken Sie die Taste "XY", um die Produktion zu starten.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -309,7 +309,7 @@ const startUp = {
     27: {
         id: 27,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Start drücken',
         content: '<p>Drücken Sie die Taste "XY", die Applikation auf dem Touchscreen leuchtet orange.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -326,7 +326,7 @@ const startUp = {
     28: {
         id: 28,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Produktion unterbrechen',
         content: '<p>Drücken Sie die Taste "Zyklus-Ende", um die Produktion wieder zu stoppen, da vorerst nur Ausschuss produziert wird.</p><p>Die Maschine wird nun unvollständige Becher produzieren.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -343,7 +343,7 @@ const startUp = {
     29: {
         id: 29,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Automatik ausschalten',
         content: '<p>Drücken Sie die Taste "XY", um die Automatik auszuschalten.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -376,7 +376,7 @@ const startUp = {
     32: {
         id: 32,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Produktion starten',
         content: '<p>Drücken Sie die Taste "XY", um die Produktion zu starten.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -393,7 +393,7 @@ const startUp = {
     33: {
         id: 33,
         ar: true,
-        plane: 'Cup',
+        marker: 'Cup',
         title: 'Start drücken',
         content: '<p>Drücken Sie die Taste "XY", die Applikation auf dem Touchscreen leuchtet orange.</p><img src="../static/img/monitor.png" alt="Monitor" loading="lazy">',
         height: 1,
@@ -418,7 +418,7 @@ const startUp = {
     35: {
         id: 35,
         ar: true,
-        plane: 'Laser',
+        marker: 'Laser',
         title: 'Laser einstellen',
         content: '<p>Drücken Sie die Taste "Menu", um zum Hauptmenü zu gelangen.</p><img src="../static/img/laser.png" alt="Laser" loading="lazy">',
         height: 1,
@@ -435,7 +435,7 @@ const startUp = {
     36: {
         id: 36,
         ar: true,
-        plane: 'Laser',
+        marker: 'Laser',
         title: 'Laser einstellen',
         content: '<p>Wählen Sie den Job "XY" durch Drehen des Steuerrades und drücken Sie dieses um zu bestätigen.</p><img src="../static/img/laser.png" alt="Laser" loading="lazy">',
         height: 1,
@@ -452,7 +452,7 @@ const startUp = {
     37: {
         id: 37,
         ar: true,
-        plane: 'Laser',
+        marker: 'Laser',
         title: 'Laser einstellen',
         content: '<p>Drücken Sie die Taste "F1", um den Auftrag zuzuweisen.</p><img src="../static/img/laser.png" alt="Laser" loading="lazy">',
         height: 1,
@@ -469,7 +469,7 @@ const startUp = {
     38: {
         id: 38,
         ar: true,
-        plane: 'Laser',
+        marker: 'Laser',
         title: 'Laser einstellen',
         content: '<p>Durch zweimaliges Drücken der ESC-Taste gelangen Sie auf den Hauptbildschirm. Dort wird der aktuell ausgewählte Schriftzug angezeigt.</p><img src="../static/img/laser.png" alt="Laser" loading="lazy">',
         height: 1,

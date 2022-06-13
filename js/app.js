@@ -1,23 +1,23 @@
 document.addEventListener("alpine:init", () => {
     Alpine.data("app", () => ({
         page: "start",
-        startUpStep: 1,
+        manualStep: 1,
+        activeMarker: null,
         expand: true,
 
         resizePlane(height, width) {
-            var element = document.getElementById("htmlElement" + startUp[this.startUpStep].plane);
-            console.log("Resize");
+            let element = document.getElementById("htmlElement" + manual[this.manualStep].marker);
             element.style.minHeight = 1000*height + "px";
             element.style.minWidth = 1000*width + "px";
         },
 
         movePlane(id, x, y, z) {
-            var plane = document.querySelector("#" + id);
+            let plane = document.querySelector("#" + id);
             plane.setAttribute("position", {x: x, y: y, z: z});
         },
 
         rotatePlane(id, x, y, z) {
-            var plane = document.querySelector("#" + id);
+            let plane = document.querySelector("#" + id);
             plane.setAttribute("rotation", {x: x, y: y, z: z});
         },
 
@@ -26,23 +26,22 @@ document.addEventListener("alpine:init", () => {
         },
 
         updateStep(step) {
-            this.startUpStep = step;
-            console.log("Update");
+            console.log(manual[this.manualStep].marker)
+            this.manualStep = step;
 
-            if(startUp[this.startUpStep].mapTop && startUp[this.startUpStep].mapLeft) {
-                this.updateMapPin(startUp[this.startUpStep].mapTop, startUp[this.startUpStep].mapLeft);
+            if(manual[this.manualStep].mapTop && manual[this.manualStep].mapLeft) {
+                this.updateMapPin(manual[this.manualStep].mapTop, manual[this.manualStep].mapLeft);
             }
 
-            if(startUp[this.startUpStep].ar) {
-                console.log("Is AR");
-                this.resizePlane(startUp[this.startUpStep].height, startUp[this.startUpStep].width);
-                this.movePlane("plane"+startUp[this.startUpStep].plane, startUp[this.startUpStep].xpos, startUp[this.startUpStep].ypos, startUp[this.startUpStep].zpos);
-                this.rotatePlane("plane"+startUp[this.startUpStep].plane, startUp[this.startUpStep].xrot, startUp[this.startUpStep].yrot, startUp[this.startUpStep].zrot);
+            if(manual[this.manualStep].ar) {
+                this.resizePlane(manual[this.manualStep].height, manual[this.manualStep].width);
+                this.movePlane("plane"+manual[this.manualStep].marker, manual[this.manualStep].xpos, manual[this.manualStep].ypos, manual[this.manualStep].zpos);
+                this.rotatePlane("plane"+manual[this.manualStep].marker, manual[this.manualStep].xrot, manual[this.manualStep].yrot, manual[this.manualStep].zrot);
             }
         },
 
         updateMapPin(top, left) {
-            var pin = document.getElementById("pin");
+            let pin = document.getElementById("pin");
             pin.style.top = "calc(" + top + "% - 12px)";
             pin.style.left = "calc(" + left + "% - 12px)";
         },
