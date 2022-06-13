@@ -26,7 +26,6 @@ document.addEventListener("alpine:init", () => {
         },
 
         updateStep(step) {
-            console.log(manual[this.manualStep].marker)
             this.manualStep = step;
 
             if(manual[this.manualStep].mapTop && manual[this.manualStep].mapLeft) {
