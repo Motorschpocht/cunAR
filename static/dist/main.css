@@ -142,8 +142,7 @@ main {
   height: 100%;
   max-height: 218px;
   width: 50vw;
-  max-width: 1024px;
-  min-width: 512px;
+  max-width: 384px;
   display: flex;
   flex-direction: column;
   padding: 32px;
@@ -152,11 +151,19 @@ main {
   backdrop-filter: blur(24px);
   z-index: 2;
   backface-visibility: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.3s ease, max-width 0.2s ease;
   will-change: max-height;
 }
 main.expanded {
   max-height: calc(100% - 112px);
+  max-width: 1024px;
+  min-width: 512px;
+}
+main.expanded .content .body {
+  overflow-y: auto;
+}
+main.expanded .content .map {
+  overflow: auto;
 }
 main.expanded .expand {
   transform: rotate(0);
@@ -187,7 +194,7 @@ main .content .headline .page {
 main .content .body {
   margin-top: 12px;
   flex: 1;
-  overflow-y: auto;
+  overflow: hidden;
 }
 main .content .body.map {
   margin: 0 -24px;
@@ -374,11 +381,13 @@ button img {
     bottom: 16px;
     left: 16px;
     width: auto;
+    max-width: auto;
     min-width: auto;
     padding: 24px;
   }
   main.expanded {
     max-height: calc(100% - 96px);
+    min-width: auto;
   }
 
   img {
@@ -403,7 +412,7 @@ button img {
   .marker {
     top: 16px;
     bottom: auto;
-    left: 140px;
+    left: 141px;
     height: 48px;
     width: 48px;
     padding: 4px;
