@@ -248,11 +248,17 @@ p {
 }
 
 img {
-  max-height: 384px;
+  max-height: 512px;
   max-width: 100%;
   display: block;
   margin: 32px auto 0;
   border-radius: var(--border-radius-small);
+}
+img.inline {
+  display: inline-block;
+  margin: 0 2px;
+  vertical-align: bottom;
+  border-radius: 2px;
 }
 
 button {
@@ -320,7 +326,7 @@ button img {
   width: 96px;
   padding: 12px;
   background: white;
-  border-radius: 50%;
+  border-radius: var(--border-radius-large);
   overflow: hidden;
 }
 .marker img {
@@ -373,6 +379,10 @@ button img {
   }
   main.expanded {
     max-height: calc(100% - 96px);
+  }
+
+  img {
+    max-height: 384px;
   }
 
   .buttons {

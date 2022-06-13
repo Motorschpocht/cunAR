@@ -32,6 +32,7 @@
                     <span x-show="expand" x-transition.opacity>
                         <p>Diese App enthält eine geführte Inbetriebnahme der CUNA-Produktion in der SmartFactoryOWL.</p>
                         <p>Einige der Schritte werden durch Elemente der Augmented Reality erweitert. Die Erkennung erfolgt dabei mithilfe von Markern, welche an der Maschine angebracht wurden.</p>
+                        <img src="static/img/front.jpg" alt="Maschine Vorderseite">
                     </span>
                 </div>
                 <div class="buttons">
@@ -63,9 +64,7 @@
                     <button x-on:click="updateStep(manualStep+1)" x-show="manualStep < Object.keys(manual).length">
                         <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
                     </button>
-                    <button x-on:click="resetAll()" x-show="manualStep == Object.keys(manual).length">
-                        <img src="static/img/expand.svg" alt="Expand" style="transform: rotate(-90deg);">
-                    </button>
+                    <button x-on:click="resetAll()" x-show="manualStep == Object.keys(manual).length">Beenden</button>
                 </div>
             </div>
 
