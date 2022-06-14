@@ -193,6 +193,7 @@ button {
     background: var(--accent);
     border-radius: var(--border-radius-large);
     cursor: pointer;
+    touch-action: manipulation;
 
     &.secondary {
         background: transparent;
