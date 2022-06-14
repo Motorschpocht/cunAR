@@ -17,6 +17,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     color: var(--text);
     overflow: hidden;
+    touch-action: manipulation;
 
     --text: #1d1d1d;
     --accent: #f5c592;
