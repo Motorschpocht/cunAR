@@ -106,8 +106,9 @@
 
         <div class="info status green" x-show="manual[manualStep].ar || page == 'start'" x-transition.opacity>AR aktiv</div>
         <div class="info status red" x-show="!manual[manualStep].ar && page != 'start'" x-transition.opacity>AR inaktiv</div>
-        <div class="marker" x-show="manual[manualStep].ar" x-transition.opacity>
+        <div class="marker" x-show="manual[manualStep].ar || page == 'start'" x-transition.opacity>
             <img :src="manual[manualStep].ar ? 'static/marker/'+manual[manualStep].marker+'.png' : 'static/marker/Blank.png'" alt="Marker" x-show="manual[manualStep].ar" x-transition.opacity>
+            <img src="static/marker/Cup.png" alt="Marker" x-show="page == 'start'" x-transition.opacity>
         </div>
         <div class="cover"></div>
         <div class="shadow" x-show="!manual[manualStep].ar && page != 'start'" x-transition.opacity></div>

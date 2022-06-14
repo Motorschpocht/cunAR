@@ -16,6 +16,7 @@
     left: 0;
     background: rgba(0,0,0,.5);
     backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     z-index: 1;
 }
 
@@ -25,4 +26,18 @@
     left: 0;
     z-index: -3;
     overflow: hidden;
+}
+
+.frame {
+    display: block;
+    min-height: 1000px;
+    min-width: 1000px;
+    padding: 48px 64px;
+    font-size: 250px;
+    font-family: sans-serif;
+    color: var(--text);
+    background: rgba(90, 90, 90, 0.1);
+    border: 48px solid var(--accent);
+    border-radius: 100px;
+    transition: min-height .1s ease, min-width .1s ease;
 }
