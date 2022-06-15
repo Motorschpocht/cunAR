@@ -291,13 +291,13 @@ button {
         bottom: 16px;
         left: 16px;
         width: auto;
-        max-width: auto;
-        min-width: auto;
+        max-width: none;
+        min-width: none;
         padding: 24px;
 
         &.expanded {
             max-height: calc(100% - 96px);
-            min-width: auto;
+            min-width: none;
         }
     }
 
