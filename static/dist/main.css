@@ -385,12 +385,12 @@ button img {
     left: 16px;
     width: auto;
     max-width: none;
-    min-width: none;
+    min-width: 0;
     padding: 24px;
   }
   main.expanded {
     max-height: calc(100% - 96px);
-    min-width: none;
+    min-width: 0;
   }
 
   img {
