@@ -177,6 +177,8 @@ img {
     border-radius: var(--border-radius-small);
 
     &.inline {
+        height: 30px;
+        width: 30px;
         display: inline-block;
         margin: 0 2px;
         vertical-align: bottom;

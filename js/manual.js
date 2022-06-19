@@ -43,7 +43,7 @@ const manual = {
         id: 6,
         ar: false,
         title: 'Laser einschalten',
-        content: '<p>Stellen Sie den Drehschalter auf der Rückseite des Lasers auf "ON".</p><img src="../static/img/laser.jpg" alt="Laser">',
+        content: '<p>Stellen Sie den Kippschalter auf der Rückseite des Lasers auf "ON".</p><img src="../static/img/laser.jpg" alt="Laser">',
         mapTop: 14,
         mapLeft: 29
     },
