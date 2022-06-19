@@ -59,7 +59,7 @@ const manual = {
         id: 8,
         ar: false,
         title: 'Temperiergerät einschalten',
-        content: '<p>Stellen Sie den Dreschalter des Temperiergerätes auf "ON".</p><img src="../static/img/temperiergerät.jpg" alt="Laser">',
+        content: '<p>Stellen Sie den Dreschalter des Temperiergerätes auf "I".</p><img src="../static/img/temperiergerät.jpg" alt="Laser">',
         mapTop: 30,
         mapLeft: 1
     },
@@ -76,7 +76,7 @@ const manual = {
         ar: true,
         marker: 'Cup',
         title: 'Linke Pfeiltaste drücken',
-        content: '<p>Die <img class="inline" src="static/img/R.jpg" alt="R">-Taste auf der rechten Bildschirmseite blinkt, drücken Sie auf die <img class="inline" src="static/img/links.png" alt="Links">-Taste rechts davon.</p><img src="../static/img/pfeiltaste.jpg" alt="Linke Pfeiltaste">',
+        content: '<p>Die <img class="inline" src="static/img/links.png" alt="Links">-Taste neben dem <img class="inline" src="static/img/R.jpg" alt="R">-Feld blinkt, drücken Sie diese.</p><img src="../static/img/pfeiltaste.jpg" alt="Linke Pfeiltaste">',
         height: 1,
         width: 1,
         xpos: -.5,
@@ -125,7 +125,7 @@ const manual = {
     13: {
         id: 13,
         ar: false,
-        title: 'Roboter einstellen',
+        title: 'Roboter aktivieren',
         content: '<p>Nehmen sie das KUKA smartPAD-2 in die Hand und drücken Sie die <img class="inline" src="static/img/R.jpg" alt="R">-Taste in der unteren rechten Ecke des Touchscreens.</p><img src="../static/img/smartpad.jpg" alt="smartPAD">',
         mapTop: 21,
         mapLeft: 41
@@ -133,33 +133,25 @@ const manual = {
     14: {
         id: 14,
         ar: false,
-        title: 'Roboter einstellen',
-        content: '<p>Drehen Sie den Modusschalter mit dem Zahnradsymbol auf der Oberseite von "EXT" auf "T1".</p><img src="../static/img/modusschalter.jpg" alt="Modusschalter">',
+        title: 'Handbetrieb aktivieren',
+        content: '<p>Drehen Sie den Modusschalter auf das Zahnradsymbol.</p><p>Auf dem Touchscreen wird die Einstellung für den Handbetrieb angezeigt, stellen Sie sicher, dass "T1" für Handbetrieb eingestellt ist.</p><p>Drehen Sie den Modusschalter wieder in die senkrechte Ausgangsposition.</p><img src="../static/img/modusschalter.jpg" alt="Modusschalter">',
         mapTop: 21,
         mapLeft: 41
     },
     15: {
         id: 15,
         ar: false,
-        title: 'Roboter einstellen',
-        content: '<p>Drehen Sie den Modusschalter wieder in die senkrechte Ausgangsposition.</p><img src="../static/img/modusschalter.jpg" alt="Modusschalter">',
+        title: 'Position ermitteln',
+        content: '<p>Halten Sie einer der Tasten auf der Rückseite des smartPADs mit einer Hand gedrückt. Die Geschwindigkeit soll auf 0% stehen und kann mit "-" auf der rechten Seite verändert werden.</p><p>Drücken Sie mit der rechten Hand auf "Start", bis die Koordinaten auf dem Bildschirm erscheinen.</p><img src="../static/img/position.jpg" alt="Position">',
         mapTop: 21,
         mapLeft: 41
     },
     16: {
         id: 16,
-        ar: false,
-        title: 'Roboter einstellen',
-        content: '<p>Halten Sie die Taste auf der Rückseite des smartPADs mit der linken Hand gedrückt und drücken Sie mit der rechten Hand auf Start bis die Koordinaten auf dem Bildschirm erscheinen.</p><p>Die Geschwindigkeit soll auf 0% stehen und kann mit "-" und "+" auf der rechten Seite verändert werden.</p><img src="../static/img/position.jpg" alt="Position">',
-        mapTop: 21,
-        mapLeft: 41
-    },
-    17: {
-        id: 17,
         ar: true,
         marker: 'Cup',
         title: 'In Grundstellung fahren',
-        content: '<p>Halten Sie die <img class="inline" src="static/img/grundstellung.png" alt="Grundstellung">-Taste gedrückt und drücken Sie währenddessen einmalig auf die <img class="inline" src="static/img/start.png" alt="Start">-Taste. Die Maschine beginnt mit der Fahrt in die Grundstellung.</p><p>Um fortzufahren erhöhen Sie die Geschwindigkeit auf ca. 10% durch Drücken der Taste "F2".</p><p>Wenn die Taste nicht mehr blinkt wurde die Grundstellung erreicht und Sie können die Geschwindigkeit wieder auf 0% reduzieren.</p><img src="../static/img/grundstellung.jpg" alt="Grundstellung">',
+        content: '<p>Halten Sie die <img class="inline" src="static/img/grundstellung.png" alt="Grundstellung">-Taste gedrückt und drücken Sie währenddessen einmalig auf die <img class="inline" src="static/img/start.png" alt="Start">-Taste. Die Maschine beginnt mit der Fahrt in die Grundstellung.</p><img src="../static/img/grundstellung.jpg" alt="Grundstellung">',
         height: 1,
         width: 1,
         xpos: -6.6,
@@ -171,35 +163,59 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
+    17: {
+        id: 17,
+        ar: false,
+        title: 'Roboter beschleunigen',
+        content: '<p>Erhöhen Sie die Geschwindigkeit des Roboters auf ca. 10% durch Drücken der Taste "+" auf dem smartPAD.</p><img src="../static/img/position.jpg" alt="Position">',
+        mapTop: 21,
+        mapLeft: 41
+    },
     18: {
         id: 18,
         ar: false,
-        title: 'Aufwärmprozess abwarten',
-        content: '<p>Die Maschine heizt nun auf, die verbleibende Wartezeit wird eingeblendet. Sie können in der Zwischenzeit mit den nächsten Schritten fortfahren.</p><img src="../static/img/aufwärmprozess.jpg" alt="Aufwärmprozess">',
+        title: 'Grundstellung prüfen',
+        content: '<p>Überprüfen Sie ob die -Taste am Bedienfeld dauerhaftet leuchtet. In diesem Fall wurde die Grundstellung erreicht.</p><img src="../static/img/aufwärmprozess.jpg" alt="Aufwärmprozess">',
         mapTop: 70,
         mapLeft: 40
     },
     19: {
         id: 19,
         ar: false,
-        title: 'Absaugung vorbereiten',
+        title: 'Geschwindkeit reduzieren',
+        content: '<p>Reduzieren Sie die Geschwindigkeit des Roboters wieder auf 0% durch Drücken der Taste "-" auf dem smartPAD.</p><img src="../static/img/position.jpg" alt="Position">',
+        mapTop: 21,
+        mapLeft: 41
+    },
+    20: {
+        id: 20,
+        ar: false,
+        title: 'Aufwärmprozess abwarten',
+        content: '<p>Die Maschine heizt nun auf, die verbleibende Wartezeit wird eingeblendet. Sie können in der Zwischenzeit mit den nächsten Schritten fortfahren.</p><img src="../static/img/aufwärmprozess.jpg" alt="Aufwärmprozess">',
+        mapTop: 70,
+        mapLeft: 40
+    },
+    21: {
+        id: 21,
+        ar: false,
+        title: 'Absaugung einschalten',
         content: '<p>Stellen Sie den Schalter an der linken Seite des Schaltkastens der Absaugung auf die obere Position.</p><img src="../static/img/absaugung.jpg" alt="Absaugung">',
         mapTop: 67,
         mapLeft: 54
     },
-    20: {
-        id: 20,
+    22: {
+        id: 22,
         ar: false,
         title: 'Absaugung vorbereiten',
         content: '<p>Ziehen Sie die Lüftungsklappe an der Unterseite der Absaugung auf.</p><img src="../static/img/lüftungsklappe.jpg" alt="Lüftungsklappe">',
         mapTop: 66,
         mapLeft: 78
     },
-    21: {
-        id: 21,
+    23: {
+        id: 23,
         ar: true,
         marker: 'Cup',
-        title: 'Materialreste entfernen',
+        title: 'Werkzeug öffnen',
         content: '<p>Drücken Sie auf die <img class="inline" src="static/img/pressform.png" alt="Pressform">-Taste, um die Pressform aufzufahren.</p><img src="../static/img/pressform.jpg" alt="Pressform">',
         height: 1,
         width: 1,
@@ -212,8 +228,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    22: {
-        id: 22,
+    24: {
+        id: 24,
         ar: true,
         marker: 'Cup',
         title: 'Ausspritzautomatik starten',
@@ -229,16 +245,16 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    23: {
-        id: 23,
+    25: {
+        id: 25,
         ar: false,
         title: 'Düse reinigen',
         content: '<p>Öffnen Sie die Abdeckung und Klappe des Aggregates und entfernen Sie die Materialreste.</p><p>Anschließend schließen Sie das Aggregat wieder.</p><img src="../static/img/düse.jpg" alt="düse">',
         mapTop: 72,
         mapLeft: 28
     },
-    24: {
-        id: 24,
+    26: {
+        id: 26,
         ar: true,
         marker: 'Cup',
         title: 'Aggregat verfahren',
@@ -253,8 +269,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    25: {
-        id: 25,
+    27: {
+        id: 27,
         ar: true,
         marker: 'Cup',
         title: 'Ausspritzautomatik starten',
@@ -270,8 +286,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    26: {
-        id: 26,
+    28: {
+        id: 28,
         ar: true,
         marker: 'Cup',
         title: 'Dosierung einstellen',
@@ -287,8 +303,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    27: {
-        id: 27,
+    29: {
+        id: 29,
         ar: true,
         marker: 'Cup',
         title: 'Produktion starten',
@@ -304,8 +320,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    28: {
-        id: 28,
+    30: {
+        id: 30,
         ar: true,
         marker: 'Cup',
         title: 'Start drücken',
@@ -321,8 +337,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    29: {
-        id: 29,
+    31: {
+        id: 31,
         ar: true,
         marker: 'Cup',
         title: 'Produktion unterbrechen',
@@ -338,8 +354,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    30: {
-        id: 30,
+    32: {
+        id: 32,
         ar: true,
         marker: 'Cup',
         title: 'Automatik ausschalten',
@@ -355,24 +371,24 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    31: {
-        id: 31,
+    33: {
+        id: 33,
         ar: false,
         title: 'Unfertige Becher entfernen',
-        content: '<p>Öffnen Sie die Tür und entfernen Sie die unvollständigen Becher vorsichtig mit einem Hammer und dem bereitliegenden Metallwerkzeug.</p><img src="../static/img/düse.jpg" alt="Düse">',
+        content: '<p>Öffnen Sie die Tür und entfernen Sie die unvollständigen Becher vorsichtig mit einem Hammer und dem bereitliegenden Werkzeug.</p><img src="../static/img/düse.jpg" alt="Düse">',
         mapTop: 72,
         mapLeft: 28
     },
-    32: {
-        id: 32,
+    34: {
+        id: 34,
         ar: false,
         title: 'Tür schließen und quittieren',
         content: '<p>Schließen Sie die Tür und quittieren Sie mit der Taste "R".</p><img src="../static/img/vorderetür.jpg" alt="Vordere Tür">',
         mapTop: 72,
         mapLeft: 28
     },
-    33: {
-        id: 33,
+    35: {
+        id: 35,
         ar: true,
         marker: 'Cup',
         title: 'Produktion starten',
@@ -388,8 +404,8 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    34: {
-        id: 34,
+    36: {
+        id: 36,
         ar: true,
         marker: 'Cup',
         title: 'Start drücken',
@@ -405,19 +421,19 @@ const manual = {
         mapTop: 70,
         mapLeft: 40
     },
-    35: {
-        id: 35,
+    37: {
+        id: 37,
         ar: false,
         title: 'Roboter beschleunigen',
-        content: '<p>Erhöhen Sie die Geschwindigkeit des Roboters mithilfe des smartPADs während des Anfahrens mit der Taste "F2" auf 50% und anschließend auf 100%.</p><p>Die ersten zwei Becher werden automatisch als Ausschuss ausgeworfen, da sie von verminderter Qualität sind.</p><img src="../static/img/smartpad.jpg" alt="smartPAD">',
+        content: '<p>Halten Sie einer der Tasten auf der Rückseite des smartPADs mit einer Hand gedrückt und erhöhen Sie die Geschwindigkeit des Roboters mithilfe des smartPADs während des Anfahrens mit der Taste "+" auf 50% und anschließend auf 100%.</p><p>Die ersten zwei Becher werden automatisch als Ausschuss ausgeworfen, da sie von verminderter Qualität sind.</p><img src="../static/img/smartpad.jpg" alt="smartPAD">',
         mapTop: 21,
         mapLeft: 41
     },
-    36: {
-        id: 36,
+    38: {
+        id: 38,
         ar: true,
         marker: 'Laser',
-        title: 'Laser einstellen',
+        title: 'Menü aufrufen',
         content: '<p>Drücken Sie die Taste "Menu", um zum Hauptmenü zu gelangen.</p><img src="../static/img/menü.jpg" alt="Menü">',
         height: 1,
         width: 1,
@@ -430,11 +446,11 @@ const manual = {
         mapTop: 15,
         mapLeft: 11
     },
-    37: {
-        id: 37,
+    39: {
+        id: 39,
         ar: true,
         marker: 'Laser',
-        title: 'Laser einstellen',
+        title: 'Aufträge aufrufen',
         content: '<p>Wählen Sie den Punkt "Job" durch Drehen des Steuerrades und drücken Sie dieses um zu bestätigen.</p><img src="../static/img/steuerrad.jpg" alt="Steuerrad">',
         height: 1,
         width: 1,
@@ -447,11 +463,28 @@ const manual = {
         mapTop: 15,
         mapLeft: 11
     },
-    38: {
-        id: 38,
+    40: {
+        id: 40,
         ar: true,
         marker: 'Laser',
-        title: 'Laser einstellen',
+        title: 'Applikation auswählen',
+        content: '<p>Wählen Sie die gewünschte Laser-Applikation durch Drehen des Steuerrades und drücken Sie dieses um zu bestätigen.</p><img src="../static/img/steuerrad.jpg" alt="Steuerrad">',
+        height: 1,
+        width: 1,
+        xpos: 5,
+        ypos: 0,
+        zpos: 1,
+        xrot: -90,
+        yrot: 0,
+        zrot: 0,
+        mapTop: 15,
+        mapLeft: 11
+    },
+    41: {
+        id: 41,
+        ar: true,
+        marker: 'Laser',
+        title: 'Auftrag zuweisen',
         content: '<p>Drücken Sie die Taste "F1", um den Auftrag zuzuweisen.</p><img src="../static/img/f1.jpg" alt="F1">',
         height: 1,
         width: 1,
@@ -464,11 +497,11 @@ const manual = {
         mapTop: 15,
         mapLeft: 11
     },
-    39: {
-        id: 39,
+    42: {
+        id: 42,
         ar: true,
         marker: 'Laser',
-        title: 'Laser einstellen',
+        title: 'Zurückkehren',
         content: '<p>Durch zweimaliges Drücken der ESC-Taste gelangen Sie auf den Hauptbildschirm zurück. Dort wird der aktuell ausgewählte Schriftzug angezeigt.</p><img src="../static/img/esc.jpg" alt="Esc">',
         height: 1,
         width: 1,
@@ -481,8 +514,8 @@ const manual = {
         mapTop: 15,
         mapLeft: 11
     },
-    40: {
-        id: 40,
+    43: {
+        id: 43,
         ar: false,
         title: 'Inbetriebnahme abgeschlossen',
         content: '<p>Die CUNA-Produktion ist nun vollständig in Betrieb genommen.</p><p>Mithilfe der grünen Taste lässt sich der Antrieb des Förderbandes manuell steuern.</p><img src="../static/img/förderband.jpg" alt="Förderband">',
