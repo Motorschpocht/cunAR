@@ -142,7 +142,7 @@ const manual = {
         id: 15,
         ar: false,
         title: 'Position ermitteln',
-        content: '<p>Halten Sie einer der Tasten auf der Rückseite des smartPADs mit einer Hand gedrückt. Die Geschwindigkeit soll auf 0% stehen und kann mit "-" auf der rechten Seite verändert werden.</p><p>Drücken Sie mit der rechten Hand auf "Start", bis die Koordinaten auf dem Bildschirm erscheinen.</p><img src="../static/img/position.jpg" alt="Position">',
+        content: '<p>Halten Sie einer der Tasten auf der Rückseite des smartPADs mit einer Hand gedrückt. Die Geschwindigkeit soll auf 0% stehen und kann mit "-" auf der rechten Seite verändert werden.</p><p>Drücken Sie auf "Start", bis die Koordinaten auf dem Bildschirm erscheinen.</p><img src="../static/img/position.jpg" alt="Position">',
         mapTop: 21,
         mapLeft: 41
     },
@@ -167,7 +167,7 @@ const manual = {
         id: 17,
         ar: false,
         title: 'Roboter beschleunigen',
-        content: '<p>Erhöhen Sie die Geschwindigkeit des Roboters auf ca. 10% durch Drücken der Taste "+" auf dem smartPAD.</p><img src="../static/img/position.jpg" alt="Position">',
+        content: '<p>Erhöhen Sie die Geschwindigkeit des Roboters auf ca. 10% durch Drücken der Taste "+" auf dem smartPAD.</p><img src="../static/img/plus.jpg" alt="Plus">',
         mapTop: 21,
         mapLeft: 41
     },
@@ -175,7 +175,7 @@ const manual = {
         id: 18,
         ar: false,
         title: 'Grundstellung prüfen',
-        content: '<p>Überprüfen Sie ob die -Taste am Bedienfeld dauerhaftet leuchtet. In diesem Fall wurde die Grundstellung erreicht.</p><img src="../static/img/aufwärmprozess.jpg" alt="Aufwärmprozess">',
+        content: '<p>Überprüfen Sie ob die <img class="inline" src="static/img/grundstellungerreicht.png" alt="Grundstellung erreicht">-Taste am Bedienfeld dauerhaftet leuchtet. In diesem Fall wurde die Grundstellung erreicht.</p><img src="../static/img/grundstellungerreicht.jpg" alt="Grundstellung">',
         mapTop: 70,
         mapLeft: 40
     },
@@ -183,7 +183,7 @@ const manual = {
         id: 19,
         ar: false,
         title: 'Geschwindkeit reduzieren',
-        content: '<p>Reduzieren Sie die Geschwindigkeit des Roboters wieder auf 0% durch Drücken der Taste "-" auf dem smartPAD.</p><img src="../static/img/position.jpg" alt="Position">',
+        content: '<p>Reduzieren Sie die Geschwindigkeit des Roboters wieder auf 0% durch Drücken der Taste "-" auf dem smartPAD.</p><img src="../static/img/minus.jpg" alt="Minus">',
         mapTop: 21,
         mapLeft: 41
     },
@@ -375,7 +375,7 @@ const manual = {
         id: 33,
         ar: false,
         title: 'Unfertige Becher entfernen',
-        content: '<p>Öffnen Sie die Tür und entfernen Sie die unvollständigen Becher vorsichtig mit einem Hammer und dem bereitliegenden Werkzeug.</p><img src="../static/img/düse.jpg" alt="Düse">',
+        content: '<p>Öffnen Sie die Tür und entfernen Sie die unvollständigen Becher vorsichtig mit einem Hammer und dem bereitliegenden Werkzeug.</p><img src="../static/img/becherentfernen.jpg" alt="Becher entfernen">',
         mapTop: 72,
         mapLeft: 28
     },
@@ -425,7 +425,7 @@ const manual = {
         id: 37,
         ar: false,
         title: 'Roboter beschleunigen',
-        content: '<p>Halten Sie einer der Tasten auf der Rückseite des smartPADs mit einer Hand gedrückt und erhöhen Sie die Geschwindigkeit des Roboters mithilfe des smartPADs während des Anfahrens mit der Taste "+" auf 50% und anschließend auf 100%.</p><p>Die ersten zwei Becher werden automatisch als Ausschuss ausgeworfen, da sie von verminderter Qualität sind.</p><img src="../static/img/smartpad.jpg" alt="smartPAD">',
+        content: '<p>Halten Sie einer der Tasten auf der Rückseite des smartPADs mit einer Hand gedrückt und erhöhen Sie die Geschwindigkeit des Roboters mithilfe des smartPADs während des Anfahrens mit der Taste "+" auf 50% und anschließend auf 100%.</p><p>Die ersten zwei Becher werden automatisch als Ausschuss ausgeworfen, da sie von verminderter Qualität sind.</p><img src="../static/img/plus.jpg" alt="Plus">',
         mapTop: 21,
         mapLeft: 41
     },
