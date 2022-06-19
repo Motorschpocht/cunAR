@@ -3,7 +3,7 @@ const manual = {
         id: 1,
         ar: false,
         title: 'Hauptschalter einschalten',
-        content: '<p>Stellen Sie den Hauptschalter der Laborhalle auf "ON".</p><p>Er befindet sich hinter dem Vorgang auf der Rückseite der Halle.</p><img src="../static/img/hauptschalter.jpg" alt="Hauptschalter">',
+        content: '<p>Stellen Sie den Hauptschalter der Laborhalle auf "ON".</p><p>Er befindet sich hinter dem Vorhang auf der Rückseite der Halle.</p><img src="../static/img/hauptschalter.jpg" alt="Hauptschalter">',
         mapTop: 90,
         mapLeft: 89
     },
