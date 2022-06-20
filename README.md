@@ -13,8 +13,9 @@ Sie enthält eine geführte Anleitung für die Inbetriebnahme der CUNA-Produktio
 
 Alle eingesetzten Bibliotheken verfügen über eine MIT-Lizenz und können auch für closed-source Projekt im kommerziellen Umfeld genutzt werden.
 
-## Lokale Installation
-Installieren Sie [http-server](https://www.npmjs.com/package/http-server) und starten Sie `start.bat`, um die Anwendung auf `localhost:8080` zu hosten.
+## Starten
+Starten Sie die `index.html`, um die Anwendung im Browser auszuführen.
+Alternativ: Installieren Sie [http-server](https://www.npmjs.com/package/http-server) und starten Sie `start.bat`, um die Anwendung auf `localhost:8080` zu hosten.
 
 ## Änderungen
 ### Anleitung
