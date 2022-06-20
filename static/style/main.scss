@@ -22,9 +22,6 @@ html {
     --green: #2db883;
     --red: #eb5757;
     --background: rgba(255,255,255,.6);
-
-    --border-radius-large: 24px;
-    --border-radius-small: 12px;
 }
 
 body {
@@ -44,7 +41,7 @@ main {
     flex-direction: column;
     padding: 32px;
     background: var(--background);
-    border-radius: var(--border-radius-large);
+    border-radius: 24px;
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     z-index: 2;
@@ -94,7 +91,7 @@ main {
                 font-weight: 500;
                 color: var(--accent);
                 background: var(--text);
-                border-radius: var(--border-radius-large);
+                border-radius: 24px;
             }
         }
 
@@ -173,7 +170,7 @@ img {
     max-width: 100%;
     display: block;
     margin: 32px auto 0;
-    border-radius: var(--border-radius-small);
+    border-radius: 12px;
 
     &.inline {
         height: 30px;
@@ -191,7 +188,7 @@ button {
     font-weight: 500;
     color: var(--text);
     background: var(--accent);
-    border-radius: var(--border-radius-large);
+    border-radius: 24px;
     cursor: pointer;
     touch-action: manipulation;
 
@@ -234,7 +231,7 @@ button {
 .status {
     padding: 14px 18px;
     color: var(--text);
-    border-radius: var(--border-radius-large);
+    border-radius: 24px;
     font-size: 20px;
     font-weight: 500;
 
@@ -256,7 +253,7 @@ button {
     width: 96px;
     padding: 12px;
     background: white;
-    border-radius: var(--border-radius-large);
+    border-radius: 24px;
     overflow: hidden;
     
     img {
@@ -275,7 +272,7 @@ button {
     justify-content: center;
     align-items: center;
     background: var(--accent);
-    border-radius: var(--border-radius-large);
+    border-radius: 24px;
     transform: rotate(180deg);
     transition: all .1s ease;
     z-index: 2;
